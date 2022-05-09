@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Dating App</a>
+
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Matches</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lists</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Messages</a>
+            </li>
+        </ul>
+        <form #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()"
+         autocomplete="off">
+            <input 
+            name="username"
+            [(ngModel)]="model.username"
+            class="form-control mr-sm-2" 
+            type="text" 
+                placeholder="Username">
+            <input 
+            name="password"
+            [(ngModel)]="model.password"
+            class="form-control mr-sm-2" 
+            type="password" placeholder="Password">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+
+    </div>
+</nav>
