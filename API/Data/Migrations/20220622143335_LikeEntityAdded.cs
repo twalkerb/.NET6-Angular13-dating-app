@@ -22,14 +22,12 @@ namespace API.Data.Migrations
                         name: "FK_Likes_Users_LikedUserId",
                         column: x => x.LikedUserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Likes_Users_SourceUserId",
                         column: x => x.SourceUserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
