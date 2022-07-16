@@ -33,7 +33,7 @@ namespace API.SignalR
             var messages = await _messageRepository.
             GetMessageThread(Context.User.GetUsername(), otherUser);
 
-            await Clients.Group(groupName).SendAsync("ReceivedMessageThread", messages);
+            await Clients.Group(groupName).SendAsync("ReceiveMessageThread", messages);
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
