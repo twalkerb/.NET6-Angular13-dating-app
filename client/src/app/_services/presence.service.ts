@@ -29,7 +29,7 @@ export class PresenceService {
     .catch(error => console.log(error));
 
     this.hubConnection.on('UsersIsOnline', username => {
-      this.toastr.info(username + 'has connected');
+      this.toastr.info(username +  'has connected');
     })
 
     this.hubConnection.on('UserIsOffline', username => {
