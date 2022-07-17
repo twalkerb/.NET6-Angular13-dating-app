@@ -21,7 +21,7 @@ namespace API.SignalR
                 }
                 else
                 {
-                    OnlineUsers.Add(username, new List<string>{connectionId});
+                    OnlineUsers.Add(username, new List<string>{ connectionId });
                     isOnline = true;
                 }
             }
@@ -44,6 +44,7 @@ namespace API.SignalR
                     isOffline = true;
                 }
             }
+            
             return Task.FromResult(isOffline);
         }
 
